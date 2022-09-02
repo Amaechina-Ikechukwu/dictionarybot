@@ -13,6 +13,7 @@ router.get("/", (res, req) => {
     hellow: "hi",
   });
 });
+
 app.use("/.netlify/fuctions/api", router);
 
-module.exports = serverless(app);
+module.exports.handler = serverless(app);
